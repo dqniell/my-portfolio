@@ -4,7 +4,6 @@ const links = [
   { label: "Experience", href: "#experience" },
   { label: "Skills", href: "#skills" },
   { label: "Projects", href: "#projects" },
-  { label: "Blog", href: "#blog" },
 ]
 
 function scrollTo(id: string) {

@@ -4,8 +4,6 @@ import About from "./pages/About"
 import Experience from "./components/Experience"
 import Skills from "./components/Skills"
 import Projects from "./components/Projects"
-import Blog from "./components/Blog"
-
 function App() {
   return (
     <>
@@ -26,9 +24,6 @@ function App() {
         <section id="projects">
           <Projects />
         </section>
-        {/* <section id="blog">
-          <Blog />
-        </section> */}
       </div>
     </>
   )
