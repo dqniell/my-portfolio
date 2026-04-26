@@ -26,7 +26,7 @@ function Hero() {
         </h2>
 
         <p className="text-zinc-500 text-lg leading-relaxed">
-          Data Science Student at UMich &amp; Aspiring Software Engineer
+          Computer Science Student at UMich &amp; Aspiring Software Engineer
         </p>
 
         {/* Buttons */}
@@ -102,7 +102,7 @@ function Hero() {
           <p className="ml-10">
             <span className="text-sky-300">role</span>
             <span className="text-white">=</span>
-            <span className="text-cyan-300">"Data Science @ UMich"</span>
+            <span className="text-cyan-300">"CS @ UMich"</span>
           </p>
           <p className="ml-10">
             <span className="text-sky-300">passion</span>

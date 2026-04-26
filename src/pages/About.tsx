@@ -46,7 +46,7 @@ function About() {
                 <span className="text-purple-400">const</span>{" "}
                 <span className="text-sky-300">degree</span>{" "}
                 <span className="text-white">=</span>{" "}
-                <span className="text-cyan-300">"B.S. Data Science"</span>
+                <span className="text-cyan-300">"B.S. Computer Science"</span>
                 <span className="text-white">;</span>
               </p>
               <p>
@@ -70,7 +70,7 @@ function About() {
               </p>
               <p className="ml-4 text-cyan-300">"Web Development",</p>
               <p className="ml-4 text-cyan-300">"Backend Engineering",</p>
-              <p className="ml-4 text-cyan-300">"Data Science",</p>
+              <p className="ml-4 text-cyan-300">"Computer Science",</p>
               <p className="ml-4 text-cyan-300">"Building things that solve real problems",</p>
               <p className="text-white">];</p>
             </div>
@@ -84,7 +84,7 @@ function About() {
           <div className="bg-white border border-zinc-200 rounded-xl p-6 flex flex-col gap-3 hover:border-black transition-colors shadow-sm">
             <span className="text-black font-mono text-xs">▶ bio</span>
             <p className="text-zinc-600 text-sm leading-relaxed">
-              Hey! I'm a Data Science student at UMich passionate about building things.
+              Hey! I'm a Computer Science student at UMich passionate about building things.
               I love turning ideas into real projects — from web apps to mobile apps.
               Currently seeking internship opportunities for Summer 2025.
             </p>
