@@ -1,5 +1,20 @@
 const experiences = [
   {
+    hash: "f3b2a17",
+    branch: "HEAD → research",
+    company: "University of Michigan, PROTEUS Project",
+    role: "Undergraduate Research Assistant",
+    date: "May 2026 – Present",
+    description: [
+      "Engineered an interactive data visualization tool to surface student interaction patterns across 4 STEM textbooks, enabling research mentors to identify engagement trends across thousands of student records.",
+      "Built automated Python data pipelines to filter, clean, and process raw Runestone Academy interaction logs, eliminating manual preprocessing and accelerating research workflows.",
+    ],
+    tags: ["Python", "Data Visualization", "pandas", "NSF-Funded"],
+    insertions: 241,
+    deletions: 0,
+    files: 6,
+  },
+  {
     hash: "e9a3c55",
     branch: "HEAD → leader",
     company: "Management Leadership for Tomorrow",
@@ -21,10 +36,10 @@ const experiences = [
     role: "Project Team Member",
     date: "Sep 2024 – Dec 2024",
     description: [
-      "Conducted statistical analysis of the COMPAS recidivism risk assessment algorithm using Python (pandas, NumPy, scikit-learn, statsmodels).",
-      "Presented a focused COMPAS analysis at the Winter 2024 MDST Project Expo.",
+      "Analyzed the COMPAS recidivism risk algorithm using Python, applying logistic regression, survival analysis, and contingency tables to surface racial disparities in algorithmic risk scoring.",
+      "Presented findings on the impact of juvenile misdemeanor history on COMPAS predictions at the Winter 2024 MDST Project Expo.",
     ],
-    tags: ["Python", "pandas", "NumPy", "scikit-learn", "statsmodels"],
+    tags: ["Python", "pandas", "NumPy", "scikit-learn", "Logistic Regression"],
     insertions: 187,
     deletions: 12,
     files: 5,
@@ -34,7 +49,7 @@ const experiences = [
     branch: "HEAD → engineer",
     company: "Nexus Plumbing & Heating LLC",
     role: "Web Developer Intern",
-    date: "Jun 2021 – Present",
+    date: "Jun 2024 – Present",
     description: [
       "Streamlined client communication managing 200+ daily interactions with 100% on-time delivery of invoices, job confirmations, and estimates.",
       "Reduced invoice creation time by 75% by building a custom React-based invoice generator using JavaScript, HTML/CSS, and html2pdf.js.",

@@ -1,6 +1,14 @@
 export const projects = [
   {
     id: 1,
+    title: "TrainSense Swift",
+    description: "Native iOS MVP of TrainSense built in Swift — interactive MapKit map overlaying all NYC subway lines parsed from bundled GTFS data, with live arrival times fetched from all MTA GTFS-RT feeds via raw protobuf parsing.",
+    tags: ["Swift", "SwiftUI", "MapKit", "MTA API", "GTFS", "Protobuf"],
+    github: "https://github.com/dqniell/TrainSense-Swift",
+    live: "",
+  },
+  {
+    id: 2,
     title: "TrainSense",
     description: "Full-stack subway planning app serving 1,000+ daily route recommendations by integrating React Native with a Flask backend processing live MTA API data and predictive analytics.",
     tags: ["React Native", "Flask", "Python", "Pandas", "scikit-learn", "HTML", "CSS"],
@@ -8,7 +16,7 @@ export const projects = [
     live: "",
   },
   {
-    id: 2,
+    id: 3,
     title: "Spotlight",
     description: "Full-stack event discovery web app integrating Ticketmaster API and Google Places API to aggregate 200+ venues with interactive mapping using Mapbox GL for geospatial visualization.",
     tags: ["React", "TypeScript", "Node.js", "MongoDB", "Mapbox", "Express"],
@@ -16,7 +24,7 @@ export const projects = [
     live: "",
   },
   {
-    id: 3,
+    id: 4,
     title: "Invoice Generator",
     description: "Custom React-based invoice generator that reduced invoice creation time by 75%, decreasing generation time from 20 minutes to under 5 minutes using JavaScript, HTML/CSS, and html2pdf.js.",
     tags: ["React", "JavaScript", "HTML", "CSS", "html2pdf.js"],
@@ -24,7 +32,7 @@ export const projects = [
     live: "",
   },
   {
-    id: 4,
+    id: 5,
     title: "NBALetterbox",
     description: "A daily NBA game digest app that delivers condensed box scores and highlights so you can follow the league without spoilers.",
     tags: ["React", "TypeScript", "NBA API"],
