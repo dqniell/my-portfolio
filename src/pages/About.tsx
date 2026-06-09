@@ -86,7 +86,6 @@ function About() {
             <p className="text-zinc-600 text-sm leading-relaxed">
               Hey! I'm a Computer Science student at UMich passionate about building things.
               I love turning ideas into real projects — from web apps to mobile apps.
-              Currently seeking internship opportunities for Summer 2025.
             </p>
           </div>
 
