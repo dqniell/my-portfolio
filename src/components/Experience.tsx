@@ -48,7 +48,7 @@ const experiences = [
     hash: "a4f2e91",
     branch: "HEAD → engineer",
     company: "Nexus Plumbing & Heating LLC",
-    role: "Web Developer Intern",
+    role: "Full-Stack Developer Intern",
     date: "Jun 2024 – Present",
     description: [
       "Streamlined client communication managing 200+ daily interactions with 100% on-time delivery of invoices, job confirmations, and estimates.",
