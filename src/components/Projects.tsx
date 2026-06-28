@@ -104,14 +104,26 @@ function Projects() {
                     <span className={`w-2.5 h-2.5 rounded-full ${langColors[project.tags[0]] ?? "bg-zinc-400"}`} />
                     <span className="font-mono text-xs text-zinc-400">{project.tags[0]}</span>
                   </div>
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="font-mono text-xs text-zinc-400 hover:text-black transition-colors flex items-center gap-1"
-                  >
-                    View ↗
-                  </a>
+                  <div className="flex items-center gap-3">
+                    {project.live && (
+                      <a
+                        href={project.live}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="font-mono text-xs text-zinc-400 hover:text-black transition-colors flex items-center gap-1"
+                      >
+                        Demo ↗
+                      </a>
+                    )}
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-mono text-xs text-zinc-400 hover:text-black transition-colors flex items-center gap-1"
+                    >
+                      View ↗
+                    </a>
+                  </div>
                 </div>
               </div>
             ))}

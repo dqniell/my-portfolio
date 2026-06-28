@@ -13,7 +13,7 @@ export const projects = [
     description: "Full-stack subway planning app serving 1,000+ daily route recommendations by integrating React Native with a Flask backend processing live MTA API data and predictive analytics.",
     tags: ["React Native", "Flask", "Python", "Pandas", "scikit-learn", "HTML", "CSS"],
     github: "https://github.com/daniellee/TrainSense",
-    live: "",
+    live: "https://trainsense-web.vercel.app/",
   },
   {
     id: 3,
@@ -21,7 +21,7 @@ export const projects = [
     description: "Full-stack event discovery web app integrating Ticketmaster API and Google Places API to aggregate 200+ venues with interactive mapping using Mapbox GL for geospatial visualization.",
     tags: ["React", "TypeScript", "Node.js", "MongoDB", "Mapbox", "Express"],
     github: "https://github.com/daniellee/Spotlight",
-    live: "",
+    live: "https://spotlight-v2-chi.vercel.app/",
   },
   {
     id: 4,
