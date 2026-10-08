@@ -209,20 +209,20 @@ function ResumePass({ className }: { className?: string }) {
       href={profile.resume}
       target="_blank"
       rel="noreferrer"
-      className={`bs-btn bs-btn-yellow relative flex flex-col items-center justify-end pb-2 ${className}`}
+      className={`bs-btn bs-btn-yellow relative flex flex-col items-center justify-center gap-1 ${className}`}
     >
       <span className="bs-shine absolute inset-0 overflow-hidden rounded-[5px]" />
-      <span className="absolute -top-5 text-6xl -rotate-12 drop-shadow-[0_3px_0_rgba(0,0,0,0.6)]">🎟️</span>
-      <span className="bs-text text-2xl leading-none">RESUME PASS</span>
+      <span className="text-[2.5rem] leading-none drop-shadow-[0_3px_0_rgba(0,0,0,0.6)]">📄</span>
+      <span className="bs-text text-2xl leading-none whitespace-nowrap">RESUME</span>
     </a>
   )
 }
 
-function QuestsCard({ className }: { className?: string }) {
+function ExperienceCard({ className }: { className?: string }) {
   return (
-    <Link to="experience" className={`bs-btn bs-btn-yellow relative flex flex-col items-center justify-end pb-2 ${className}`}>
-      <span className="absolute -top-5 text-5xl drop-shadow-[0_3px_0_rgba(0,0,0,0.6)]">📋</span>
-      <span className="bs-text text-xl leading-none">QUESTS</span>
+    <Link to="experience" className={`bs-btn bs-btn-yellow relative flex flex-col items-center justify-center gap-1 ${className}`}>
+      <span className="text-[2.5rem] leading-none drop-shadow-[0_3px_0_rgba(0,0,0,0.6)]">💼</span>
+      <span className="bs-text text-lg leading-none whitespace-nowrap">EXPERIENCE</span>
       <span className="absolute -top-3 -right-3 px-2 py-0.5 bg-[#ff3b3b] border-[3px] border-[#0b1020] bs-text-sm text-xs">NEW</span>
     </Link>
   )
@@ -318,7 +318,7 @@ function LandscapeMenu() {
 
       <div className="absolute bottom-4 left-6 flex items-end gap-3 z-10">
         <ResumePass className="w-56 h-24" />
-        <QuestsCard className="w-32 h-24" />
+        <ExperienceCard className="w-32 h-24" />
       </div>
       <EventBox className="absolute bottom-4 right-[360px] w-[520px] z-10" />
       <div className="absolute bottom-4 right-6 w-80 flex flex-col gap-2 z-10">
@@ -371,7 +371,7 @@ function PortraitMenu({ stageH }: { stageH: number }) {
       <div className="absolute bottom-3 left-3 right-3 flex flex-col gap-2.5 z-10">
         <div className="flex items-end gap-3">
           <ResumePass className="flex-1 h-20" />
-          <QuestsCard className="w-32 h-20" />
+          <ExperienceCard className="w-32 h-20" />
         </div>
         <EventBox compact />
         <RewardStrip compact />
