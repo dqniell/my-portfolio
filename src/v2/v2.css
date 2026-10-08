@@ -1,0 +1,174 @@
+/* Brawl Stars–inspired styles for portfolio v2. All classes are prefixed bs- */
+
+.bs-root {
+  font-family: "Lilita One", "Arial Rounded MT Bold", system-ui, sans-serif;
+  color: #fff;
+  letter-spacing: 0.02em;
+}
+
+/* Halloween menu background: deep purple with a faint jack-o'-lantern pattern */
+.bs-bg {
+  background-color: #1a1240;
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140' viewBox='0 0 140 140'%3E%3Cg fill='%23ffffff' fill-opacity='0.05' fill-rule='evenodd'%3E%3Cpath d='M35 12a23 20 0 1 0 0.1 0z M24 24l7-6 3 9z M46 24l-7-6-3 9z M20 33q15 13 30 0l-5 2-3-3-4 4-3-4-4 4-3-4-3 3z'/%3E%3Cpath d='M105 82a23 20 0 1 0 0.1 0z M94 94l7-6 3 9z M116 94l-7-6-3 9z M90 103q15 13 30 0l-5 2-3-3-4 4-3-4-4 4-3-4-3 3z'/%3E%3C/g%3E%3C/svg%3E"),
+    radial-gradient(ellipse at 50% 40%, #7656cf 0%, #4a3396 30%, #2a1d61 62%, #130c33 100%);
+  background-size: 140px 140px, 100% 100%;
+  animation: bs-pattern 18s linear infinite;
+}
+
+/* Classic bright blue background (swap the class name to .bs-bg to restore) */
+.bs-bg-classic {
+  background-color: #0a86e8;
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cg fill='%23ffffff' fill-opacity='0.07'%3E%3Cpath d='M30 12l5 13 14 1-11 9 4 14-12-8-12 8 4-14-11-9 14-1z'/%3E%3Cpath d='M90 72l5 13 14 1-11 9 4 14-12-8-12 8 4-14-11-9 14-1z'/%3E%3C/g%3E%3C/svg%3E"),
+    radial-gradient(circle at 50% 45%, #7ff4ff 0%, #2cc4fa 30%, #0f8ee8 65%, #0560c4 100%);
+  background-size: 120px 120px, 100% 100%;
+}
+
+@keyframes bs-pattern {
+  from { background-position: 0 0, 0 0; }
+  to { background-position: 0 -140px, 0 0; }
+}
+
+/* White text with the game's down-left drop shadow and a thin outline */
+.bs-text {
+  color: #fff;
+  text-shadow:
+    -3px 3px 0 #000, -2px 2px 0 #000,
+    0 2px 0 #000, 2px 0 0 #000, 0 -2px 0 #000, -2px 0 0 #000,
+    1px 1px 0 #000, -1px -1px 0 #000;
+}
+
+.bs-text-sm {
+  color: #fff;
+  text-shadow: -2px 2px 0 #000, 0 1px 0 #000, 1px 0 0 #000, 0 -1px 0 #000;
+}
+
+/* Chunky slanted button: light strip on top, dark strip on the bottom,
+   squishes when pressed. Children are counter-skewed so text stays upright. */
+.bs-btn {
+  position: relative;
+  background: linear-gradient(180deg, #3e475e 0%, #343c50 63%, #38545f 100%);
+  border: 3px solid #050e25;
+  border-radius: 8px;
+  box-shadow: 0 5px 0 rgba(0, 0, 0, 0.35);
+  transform: skewX(-9deg);
+  transition: transform 120ms ease, filter 120ms ease;
+  cursor: pointer;
+}
+.bs-btn > *:not(.bs-shine) {
+  transform: skewX(9deg);
+}
+.bs-btn::before,
+.bs-btn::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 4px;
+  pointer-events: none;
+}
+.bs-btn::before {
+  top: 0;
+  background: #5a5371;
+  border-radius: 5px 5px 0 0;
+}
+.bs-btn::after {
+  bottom: 0;
+  background: #252c3c;
+  border-radius: 0 0 5px 5px;
+}
+.bs-btn:hover {
+  filter: brightness(1.12);
+}
+.bs-btn:active {
+  transform: scale(0.92) skewX(-9deg);
+}
+
+.bs-btn-yellow {
+  background: linear-gradient(180deg, #ffd92e 0%, #eec308 100%);
+  border-color: #000;
+}
+.bs-btn-yellow::before {
+  background: #fbef43;
+}
+.bs-btn-yellow::after {
+  background: #a5532d;
+}
+
+/* Slanted black chip for currencies and small labels */
+.bs-chip {
+  background: #000;
+  transform: skewX(-9deg);
+}
+.bs-chip > * {
+  transform: skewX(9deg);
+}
+
+/* Two-tone bar: darker top half, like the rank / trophy bars */
+.bs-two-tone {
+  position: relative;
+}
+.bs-two-tone::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 50% 0;
+  background: rgba(0, 0, 0, 0.22);
+  pointer-events: none;
+}
+
+/* Dark translucent panel for stats and content cards */
+.bs-panel {
+  background: linear-gradient(180deg, rgba(37, 46, 72, 0.95), rgba(24, 30, 50, 0.95));
+  border: 3px solid #0b1020;
+  border-radius: 14px;
+  box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.12), 0 5px 0 rgba(11, 16, 32, 0.8);
+}
+
+.bs-body {
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  letter-spacing: 0;
+}
+
+@keyframes bs-idle {
+  0%, 100% { transform: translateY(0) scaleY(1); }
+  50% { transform: translateY(-10px) scaleY(1.015); }
+}
+.bs-idle {
+  animation: bs-idle 2.4s ease-in-out infinite;
+  transform-origin: bottom center;
+}
+
+@keyframes bs-shadow {
+  0%, 100% { transform: scaleX(1); opacity: 0.35; }
+  50% { transform: scaleX(0.85); opacity: 0.25; }
+}
+.bs-idle-shadow {
+  animation: bs-shadow 2.4s ease-in-out infinite;
+}
+
+@keyframes bs-shine {
+  0% { transform: translateX(-120%) skewX(-20deg); }
+  60%, 100% { transform: translateX(260%) skewX(-20deg); }
+}
+.bs-shine::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 40%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.55), transparent);
+  animation: bs-shine 3s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes bs-float {
+  0%, 100% { transform: translate(0, 0) scaleY(1); }
+  50% { transform: translate(10px, -8px) scaleY(0.8); }
+}
+.bs-float {
+  animation: bs-float 2.6s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bs-float, .bs-bg, .bs-idle, .bs-idle-shadow, .bs-shine::after { animation: none; }
+}

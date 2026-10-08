@@ -1,31 +1,18 @@
-import Navbar from "./components/Navbar"
-import Hero from "./components/Hero"
-import About from "./pages/About"
-import Experience from "./components/Experience"
-import Skills from "./components/Skills"
-import Projects from "./components/Projects"
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom"
+import V1App from "./v1/App"
+import V2App from "./v2/App"
+
+// To make v2 the main site: swap the "/" and "/v2" elements below,
+// and change the "/v1" route to point at V1App.
 function App() {
   return (
-    <>
-      <Navbar />
-      <div className="pt-16">
-        <section id="home">
-          <Hero />
-        </section>
-        <section id="about">
-          <About />
-        </section>
-        <section id="experience">
-          <Experience />
-        </section>
-        <section id="skills">
-          <Skills />
-        </section>
-        <section id="projects">
-          <Projects />
-        </section>
-      </div>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<V1App />} />
+        <Route path="/v2/*" element={<V2App />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 
