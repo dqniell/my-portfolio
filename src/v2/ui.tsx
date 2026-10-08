@@ -38,7 +38,7 @@ export function MenuButton({
         </span>
       )}
       {tag && (
-        <span className="absolute -top-3 -right-6 px-2 py-0.5 bg-[#2ecc40] border-[3px] border-[#0b1020] -skew-x-12 bs-text-sm text-xs">
+        <span className={clsx("absolute -top-3 px-2 py-0.5 bg-[#2ecc40] border-[3px] border-[#0b1020] -skew-x-12 bs-text-sm text-xs", compact ? "-right-1" : "-right-6")}>
           {tag}
         </span>
       )}

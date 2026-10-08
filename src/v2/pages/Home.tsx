@@ -120,6 +120,7 @@ function MainMenu() {
       </button>
       {open && (
         <div className="bs-panel absolute right-0 top-14 z-30 flex flex-col p-2 w-56">
+          <a href={profile.resume} target="_blank" rel="noreferrer" className="bs-text-sm text-lg px-3 py-2 rounded hover:bg-white/10">📄 Resume</a>
           <a href="/" className="bs-text-sm text-lg px-3 py-2 rounded hover:bg-white/10">🕹️ Classic site (v1)</a>
           <a href={profile.github} target="_blank" rel="noreferrer" className="bs-text-sm text-lg px-3 py-2 rounded hover:bg-white/10">🐙 GitHub</a>
           <a href={profile.linkedin} target="_blank" rel="noreferrer" className="bs-text-sm text-lg px-3 py-2 rounded hover:bg-white/10">💼 LinkedIn</a>
@@ -132,13 +133,14 @@ function MainMenu() {
 const leftButtons = (compact?: boolean) => (
   <>
     <MenuButton to="projects" icon="🎮" label="PROJECTS" badge={projects.length} yellow compact={compact} />
-    <MenuButton to="skills" icon="⚡" label="SKILLS" tag="NEW" compact={compact} />
+    <MenuButton to="skills" icon="⚡" label="SKILLS" compact={compact} />
     <MenuButton to="education" icon="🎓" label="EDUCATION" compact={compact} />
   </>
 )
 
 const rightButtons = (compact?: boolean) => (
   <>
+    <MenuButton to="learning" icon="📚" label="LEARNING" tag="NOW" compact={compact} />
     <MenuButton to="about" icon="🙋" label="ABOUT ME" compact={compact} />
     <MenuButton to="contact" icon="💬" label="CONTACT" compact={compact} />
     <MenuButton to="club" icon="🛡️" label="CLUB" compact={compact} />
@@ -203,18 +205,16 @@ function SpeechBubble({ className }: { className?: string }) {
   )
 }
 
-function ResumePass({ className }: { className?: string }) {
+function AchievementsCard({ className }: { className?: string }) {
   return (
-    <a
-      href={profile.resume}
-      target="_blank"
-      rel="noreferrer"
+    <Link
+      to="achievements"
       className={`bs-btn bs-btn-yellow relative flex flex-col items-center justify-center gap-1 ${className}`}
     >
       <span className="bs-shine absolute inset-0 overflow-hidden rounded-[5px]" />
-      <span className="text-[2.5rem] leading-none drop-shadow-[0_3px_0_rgba(0,0,0,0.6)]">📄</span>
-      <span className="bs-text text-2xl leading-none whitespace-nowrap">RESUME</span>
-    </a>
+      <span className="text-[2.5rem] leading-none drop-shadow-[0_3px_0_rgba(0,0,0,0.6)]">🏅</span>
+      <span className="bs-text text-2xl leading-none whitespace-nowrap">ACHIEVEMENTS</span>
+    </Link>
   )
 }
 
@@ -317,7 +317,7 @@ function LandscapeMenu() {
       </div>
 
       <div className="absolute bottom-4 left-6 flex items-end gap-3 z-10">
-        <ResumePass className="w-56 h-24" />
+        <AchievementsCard className="w-56 h-24" />
         <ExperienceCard className="w-32 h-24" />
       </div>
       <EventBox className="absolute bottom-4 right-[360px] w-[520px] z-10" />
@@ -338,7 +338,7 @@ function PortraitMenu({ stageH }: { stageH: number }) {
   const free = stageH - PORTRAIT_TOP - PORTRAIT_BOTTOM_STACK
   const brawlerH = Math.round(Math.min(380, Math.max(260, free - 80)))
   const blockTop = PORTRAIT_TOP + Math.max(0, (free - (brawlerH + 44)) / 2)
-  const navTop = blockTop + 40
+  const navTop = blockTop
 
   return (
     <>
@@ -370,7 +370,7 @@ function PortraitMenu({ stageH }: { stageH: number }) {
 
       <div className="absolute bottom-3 left-3 right-3 flex flex-col gap-2.5 z-10">
         <div className="flex items-end gap-3">
-          <ResumePass className="flex-1 h-20" />
+          <AchievementsCard className="flex-1 h-20" />
           <ExperienceCard className="w-32 h-20" />
         </div>
         <EventBox compact />

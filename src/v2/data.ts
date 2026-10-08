@@ -178,3 +178,59 @@ export const about = {
     { emoji: "🍍", text: "I always get pineapple on my pizza" },
   ],
 }
+
+// Trophy road milestones, oldest first. Only facts from the resume.
+export const achievements = [
+  {
+    emoji: "🎤",
+    title: "Presented at the MDST Project Expo",
+    date: "Dec. 2024",
+    detail: "Shared findings on racial disparities in COMPAS risk scores with 100+ attendees.",
+  },
+  {
+    emoji: "⚔️",
+    title: "Shipped LeetQuest at DivHacks",
+    date: "Oct. 2025",
+    detail: "Built the Flask backend and OpenAI-powered tutor for a team of 3 in one hackathon.",
+  },
+  {
+    emoji: "🛡️",
+    title: "Selected as an MLT Career Prep Fellow",
+    date: "Jan. 2026",
+    detail: "Chosen for Management Leadership for Tomorrow's 18-month career development program.",
+  },
+  {
+    emoji: "🔬",
+    title: "Joined NSF-funded research",
+    date: "May 2026",
+    detail: "Became an undergraduate research assistant on the PROTEUS Project at the University of Michigan.",
+  },
+  {
+    emoji: "🐞",
+    title: "Caught a silent data-loss bug",
+    date: "2026",
+    detail: "Found a 512-character truncation dropping ~30% of long submissions, correcting a key metric from 16.3% to 7.1%.",
+  },
+  {
+    emoji: "⚡",
+    title: "12.8M events/sec order book",
+    date: "June 2026",
+    detail: "Replayed 4.88M real Nasdaq ITCH events at ~78 ns/event in a C++ limit order book.",
+  },
+]
+
+// What I'm currently working on. Add new entries at the top.
+export const learning = [
+  {
+    emoji: "🌐",
+    title: "Web Systems",
+    status: "In progress",
+    detail: "Taking Web Systems at the University of Michigan.",
+  },
+  {
+    emoji: "🔬",
+    title: "Research-scale data pipelines",
+    status: "Ongoing",
+    detail: "Building ETL pipelines and dashboards for the PROTEUS Project, working with 960K+ log events.",
+  },
+]
